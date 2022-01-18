@@ -425,7 +425,7 @@ main{
     bottom:140px;
     border-radius:50%;
     line-height:80px;
-    text-align:center;
+    text-align:right;
     z-index:100;
 }
 
