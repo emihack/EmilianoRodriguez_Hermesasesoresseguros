@@ -35,25 +35,25 @@
                   </li>
                   
                   <li class="nav-item">
-                    <a class="navbar nav__menu--enlace" href=index.html#productos>Servicios</a>
+                    <a class="navbar nav__menu--enlace" href="index.html#productos">Servicios</a>
                   </li>
 
                   <li class="nav-item">
-                    <a class="navbar nav__menu--enlace" href=index.html#empresas>Empresas</a>
+                    <a class="navbar nav__menu--enlace" href="index.html#empresas">Empresas</a>
                   </li>
                     
                   </li>
                   <li class="nav-item">
-                    <a class="navbar nav__menu--enlace" href="pages/cotizacion.html">Solicitá tu cotizacion</a>
+                    <a class="navbar nav__menu--enlace" href="cotizacion.html">Solicitá tu cotizacion</a>
                   </li>
                   <li class="nav-item">
-                    <a class="navbar nav__menu--enlace" href="pages/nosotros.html">Preguntas frecuentes</a>
+                    <a class="navbar nav__menu--enlace" href="nosotros.html">Preguntas frecuentes</a>
                   </li>
                   <li class="nav-item">
-                    <a class="navbar nav__menu--enlace" href="pages/sucursales.html">Sucursales</a>
+                    <a class="navbar nav__menu--enlace" href="sucursales.html">Sucursales</a>
                   </li>
                   <li class="nav-item">
-                    <a class="navbar nav__menu--enlace" href="pages/contacto.html">Contacto</a>
+                    <a class="navbar nav__menu--enlace" href="contacto.html">Contacto</a>
                   </li>
                 </ul>
               </div>
@@ -61,45 +61,37 @@
             </div>
           </nav>
       </header>
-
-    <form class="formulario" action="" method="GET">
-                <h1 class="formulario__h1">Ingresa los datos para cotizar</h1>
-                                    
-                <label class="formulario__titulo" for="nombreApellido"></label>
-                <input class="formulario__titulo--campo" type="text" placeholder="Nombre y Apellido" id="nombreApellido">
-
-                <label class="formulario__titulo" for="marca"></label>
-                <input class="formulario__titulo--campo" type="text" placeholder="Marca" id="marca">
-               
-                <label class="formulario__titulo" for="modelo"></label>
-                <input class="formulario__titulo--campo" type="text" placeholder="Modelo" id="modelo">
-
-                <label class="formulario__titulo" for="version"> </label>
-                <input class="formulario__titulo--campo" type="text" placeholder="Version" id="version">
-                <div class="formulario__radio">
-                    <p class="formulario__radio--gnc">
-                    ¿Posee GNC?
-                    <input type="radio" name="gnc" id="gnc" value="1">Si
-                    <input type="radio" name="gnc" id="gnc" value="1">No 
-                    </p>
-
-                    <p class="formulario__radio--0km">
-                        ¿Es 0KM?
-                        <input type="radio" name="0km" id="0km" value="1">Si
-                        <input type="radio" name="0km" id="0km" value="1">No
-                    </p>
-                </div>
-                <label class="formulario__titulo" for="año"></label>
-                <input class="formulario__titulo--campo" type="text" placeholder="Año" id="año">
-
-                <label class="formulario__titulo" for="codigoPostal"></label>
-                <input class="formulario__titulo--campo" type="text" placeholder="Codigo Postal" id="codigoPostal">
-
-                <label class="formulario__titulo" for="email"></label>
-                <input class="formulario__titulo--campo" type="email" placeholder="E-Mail" id="email">
-                <input class="formulario__boton" type="submit" value="Solicitar Cotizacion">
+    
+    <main>
+            <form class="formulario" action="" method="GET">
+                <label class="formulario__titulo" for="nombre">Nombre: </label>
+                <input class="formulario__titulo--campo" type="text" id="nombre">
+                <label class="formulario__titulo" for="apellido">Apellido: </label>
+                <input class="formulario__titulo--campo" type="text" id="apellido">
+                <label class="formulario__titulo" for="email">E-Mail: </label>
+                <input class="formulario__titulo--campo" type="email" id="email">
+                <select class="formulario__select" name="relacion" id="" > 
+                    <option selected value="0"> Elige una opción </option>
+                    <option value="asegurado">Asegurado</option>
+                    <option value="tercero">Tercero</option>
+           
+                    
+                </select>
                 
-    </form>
+                <textarea class="formulario__texto" name="Mensaje" rows="10" cols="30">Deje su consulta aqui...
+                </textarea>
+                <div class="formulario__titulo--newsletter">
+                <label   for="acepta">¿Desea recibir el Newsletter?</label>
+                <input  type="checkbox" id="acepta" value="1">
+                </div>
+                <input class="formulario__boton" type="reset">
+                <input  class="formulario__boton"type="submit">
+
+            </form><br><br><br>    
+    </main>            
+      
+    
+    
     <footer class="footer">
       <p class="footer__parrafo">Seguinos en nuestras redes</p>
       <a class="m-5" href="https://www.facebook.com/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
