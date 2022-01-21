@@ -40,7 +40,7 @@
   }
   
   @media (max-width: 700px) {
-    .logo__img, .asesoramiento1 {
+    .asesoramiento1, .descripcion {
       display: none;
     }
   }
@@ -204,6 +204,7 @@
   }
   
   /*MAIN*/
+    /*UTILICE EXTEND*/
   
   .main--raise {
     background-color: none;
@@ -214,18 +215,25 @@
     font-family: 'Dongle', sans-serif;
     font-size: 5rem;
     margin-bottom: 10rem;
-    box-shadow: 0 0.5em 0.5em -0.3em var(--hover);
-    
+    box-shadow: 0 0.5em 0.5em -0.3em var(--hover);  
   }
-  
- 
-  
-  /* SERVICIOS */
-  
-  .main {
-    width: 70%;
-    margin: auto;
+  .main--empresas{
+    @extend .main--raise;
   }
+
+  
+  /*SERVICIOS*/
+  /*UTILICÉ MIXIN*/
+  
+  @mixin size ($width, $height) {
+    height: $height;
+    width: $width;
+  }
+    .main{
+      @include size(auto, 70%)
+
+    }
+
   
   .servicios--imagen {
     width: 100%;
@@ -292,35 +300,48 @@
   }
   
   /*FOOTER*/
-  
+
+  /*map-get*/
+  $estilos: (
+    text-align: center,
+    color1: white,
+    colorfondo: #000,
+    tFuente: 1.5rem,
+    color2: grey,
+    tFuente1: 1rem,
+    tpadding: 1rem,
+    cien: 100%,
+    tFuenteL: large,
+    sindeco: none,
+  );
   .footer {
-    text-align: center;
-    margin-top: 1rem;
+    text-align: map-get($estilos,text-align);
+    margin-top: map-get($estilos, tFuente2);
   }
   
   .footer__parrafo {
-    color: white;
-    background-color: rgb(0, 0, 0);
-    font-size: 1.5rem;
+    color: map-get($estilos, color1);
+    background-color:map-get($estilos,colorfondo);
+    font-size: map-get($estilos, tFuente);
     padding: 1rem;
     margin-bottom: 1rem;
   }
   
   .footer__copyright {
-    color: grey;
-    font-size: 1rem;
-    padding: 1rem;
+    color: map-get($estilos, color2);
+    font-size: map-get($estilos, tFuente1);
+    padding: map-get($estilos, tpadding);
   }
   
   .footer__ssn {
     margin-top: 25px;
-    width: 100%;
+    width: map-get($estilos, cien);
     height: auto;
   }
   
   .footer__privacidad {
-    font-size: large;
-    text-decoration: none;
+    font-size: map-get($estilos, tFuenteL);
+    text-decoration: map-get($estilos, sindeco);
   }
   
   /* contacto.HTML y cotizacion.HTML*/

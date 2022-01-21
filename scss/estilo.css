@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +42,7 @@ html {
 }
 
 @media (max-width: 700px) {
-  .logo__img, .asesoramiento1 {
+  .asesoramiento1, .descripcion {
     display: none;
   }
 }
@@ -212,7 +213,8 @@ html, body {
 }
 
 /*MAIN*/
-.main--raise {
+/*UTILICE EXTEND*/
+.main--raise, .main--empresas {
   background-color: none;
   --color:#000000;
   --hover:#0051ff;
@@ -229,10 +231,11 @@ html, body {
           box-shadow: 0 0.5em 0.5em -0.3em var(--hover);
 }
 
-/* SERVICIOS */
+/*SERVICIOS*/
+/*UTILICÉ MIXIN*/
 .main {
-  width: 70%;
-  margin: auto;
+  height: 70%;
+  width: auto;
 }
 
 .servicios--imagen {
@@ -313,14 +316,14 @@ html, body {
 }
 
 /*FOOTER*/
+/*map-get*/
 .footer {
   text-align: center;
-  margin-top: 1rem;
 }
 
 .footer__parrafo {
   color: white;
-  background-color: black;
+  background-color: #000;
   font-size: 1.5rem;
   padding: 1rem;
   margin-bottom: 1rem;
