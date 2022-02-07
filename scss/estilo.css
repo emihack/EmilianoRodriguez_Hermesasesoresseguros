@@ -238,22 +238,18 @@ html, body {
   width: auto;
 }
 
-.servicios--imagen {
-  width: 100%;
-  opacity: initial;
-  -webkit-transition: all 3s;
-  transition: all 3s;
-  -webkit-filter: opacity(80%);
-          filter: opacity(80%);
-}
-
-.servicios--imagen:hover {
-  -webkit-transform: scale(0.5, 0.5);
-          transform: scale(0.5, 0.5);
-  -webkit-filter: opacity(100%);
-          filter: opacity(100%);
-}
-
+/* 
+  .servicios--imagen {
+    width: 50%;
+    opacity: initial;
+    transition: all 3s;
+    filter: opacity(80%);
+  
+    &:hover {
+      transform: scale(0.5, 0.5);
+      filter: opacity(100%);
+    }
+  } */
 .list-group-item {
   font-size: large;
   width: auto;
@@ -278,8 +274,8 @@ html, body {
 }
 
 .card-img-top {
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 350px;
   padding: 40px;
   margin: 2px;
 }
